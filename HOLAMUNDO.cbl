@@ -1,5 +1,6 @@
       * un programa se compone de distintas divisiones
       * IDENTIFICATION DIVISION permite colocarle un nombre al programa
+      * que nos servira para invocarlo desde otro programa de COBOL,
       * entre otros datos
        IDENTIFICATION DIVISION.
        PROGRAM-ID. HOLAMUNDO.
