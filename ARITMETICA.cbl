@@ -26,7 +26,11 @@
            DISPLAY "SUBTRACT NUMERO1 NUMERO2 5 FROM RESULTADO:"RESULTADO.
       * RESULTADO = NUMERO1 - 5 - NUMERO2
            SUBTRACT NUMERO1 5 FROM NUMERO2 GIVING RESULTADO.
-           DISPLAY "SUBTRACT NUMERO1 5 FROM NUMERO2 GIVING RESULTADO = "RESULTADO.
+      *    Esta instruccion ocupa 72 caracteres en una linea, por lo que ya no es posible colocar mas
+           DISPLAY "SUBTRACT NUMERO1 5 FROM NUMERO2 GIVING RESULTADO ="
+      * se emplea el caracter '-' en la columna 7 para indicar que se esta continuando la instruccion de
+      * la linea anterior
+      -RESULTADO.
 
            MOVE 0 TO RESULTADO.
       * MULTIPLICACION

@@ -20,11 +20,11 @@ Las líneas de codigo cambiaran su comportamiento en función del numero de colu
 
 - La primera sección que va de las columnas 1 a la 6, indica el número de área; normalmente se encuentra vacía, sin embargo, en ciertas ocasiones podemos utilizarla para proveer de contexto a las instrucciones.
 
-- La columna 7 se conoce como indicador de Área es un área multipropósito; si nosotros colocamos un asterisco ```*``` esa línea se convertirá en un comentario, una ```D``` lo transformará en una línea de debugeo, entre otras funciones más.
+- La columna 7 se conoce como indicador de Área es un área multipropósito; si nosotros colocamos un asterisco ```*``` esa línea se convertirá en un comentario, una ```D``` lo transformará en una línea de debugeo y un ```-``` permite continuar la instrucción de la línea anterior
 
 - Las columnas 8 a 11 conforman el área A, aquí encontraremos las **Divisiones**, **Secciones**, **Párrafos**, **Indicadores de nivel** y otros elementos que le proporcionan estructura a un programa en COBOL.
 
-- En el área B que va de la columna 12 a la columna 72, es donde se colocaran las **Instrucciones**, **Sentencias** y **Cláusulas** de un programa en COBOL.**NOTA**: De superarse la columna 73 la instrucción será truncada
+- En el área B que va de la columna 12 a la columna 72, es donde se colocaran las **Instrucciones**, **Sentencias** y **Cláusulas** de un programa en COBOL.**NOTA**: De superarse la columna 72 la instrucción será truncada
 
 - Por último, el área de identificación va de las columnas 73 a la 80, normalmente se encuentra en blanco y el programador lo puede utilizar para cualquier propósito.
 
