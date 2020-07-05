@@ -8,13 +8,23 @@
            77 NUMERO2 PIC 9 value 2.
            77 RESULTADO PIC 99 VALUE 1.
            77 numerogrande PIC s9(10)v99 COMP-3 VALUE ZERO.
-      * El elemento de datos se almacena en formato decimal empaquetado en
-      * COMP-3. El formato decimal empaquetado significa que cada byte de
-      * almacenamiento (excepto el byte de orden bajo) puede contener dos números
-      * decimales. El byte de orden inferior contiene un dígito en la parte
-      * izquierda y el signo (positivo o negativo) en la parte derecha. l
-      * almacenamiento computacional se usa frecuentemente para reducir el tamaño
-      * de un archivo.
+      * El empaquetamiento computacional se usa frecuentemente para reducir el
+      * tamaño de un archivo.
+      * Existenten distintos tipos de empaquetamiento en COBOL
+      * COMP-1 : usado en la representacion de datos flotantes de precision
+      * simple, de 0 hasta 10**38
+      * COMP-2 : usado en la representacion de datos flotantes de precision
+      * doble, de 0 hasta 10**307
+      * COMP-3 : representa los numeros como BCD, binario codificado en decimal,
+      * permite representar digitos por arriba de 31 decimales. A los cajeros
+      * automaticos les gusta esta representacion. En un byte se almacenan dos
+      * numeros decimales
+      * Decimal:    0     1     2     3     4     5     6     7     8     9
+      * BCD:     0000  0001  0010  0011  0100  0101  0110  0111  1000  1001
+      * COMP-4 : solo puede representar enteros
+      * COMP-5 : similar al comp-4, pero puedes especificar la posicion del punto
+      * decimal, combian la eficiencia del cmp-4 con la exactitud del comp-3, no
+      * se pueden exceder los 18 digitos decimales
 
        PROCEDURE DIVISION.
            DISPLAY "NUMERO1 = "NUMERO1.
@@ -71,8 +81,8 @@
            COMPUTE RESULTADO = 3 ** 3.
            DISPLAY "RESULTADO = 3 ** 3 = "RESULTADO.
 
-      *  en C el numero negativo mas grande que se puede almacenar en un
-      * int es -2147483648
+      *  en C el numero negativo mas pequeño que se puede almacenar en un
+      * int es (-2147483647-1)
            move -9000000000.22 to numerogrande
            display numerogrande.
 
