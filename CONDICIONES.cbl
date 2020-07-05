@@ -28,3 +28,4 @@
       * fin del bloque IF
 
            STOP RUN.
+      * https://www.ibm.com/support/knowledgecenter/SSY4B9_4.1.0/com.ibm.mu.doc_4.1/fsyugcondexp.html
