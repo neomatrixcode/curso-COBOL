@@ -7,6 +7,14 @@
            77 NUMERO1 PIC 9 VALUE 1.
            77 NUMERO2 PIC 9 value 2.
            77 RESULTADO PIC 99 VALUE 1.
+           77 numerogrande PIC s9(10)v99 COMP-3 VALUE ZERO.
+      * El elemento de datos se almacena en formato decimal empaquetado en
+      * COMP-3. El formato decimal empaquetado significa que cada byte de
+      * almacenamiento (excepto el byte de orden bajo) puede contener dos números
+      * decimales. El byte de orden inferior contiene un dígito en la parte
+      * izquierda y el signo (positivo o negativo) en la parte derecha. l
+      * almacenamiento computacional se usa frecuentemente para reducir el tamaño
+      * de un archivo.
 
        PROCEDURE DIVISION.
            DISPLAY "NUMERO1 = "NUMERO1.
@@ -53,7 +61,19 @@
 
       * MIX
       * COMPUTE evalua una expresion aritmetica
+      * PEMDAS
+      * parentesis exponentes multiplicacion division adicion substraccion
+      * cobol evalua las expresiones aritmeticas en ese orden
            COMPUTE RESULTADO = (2 + 3) * 5.
            DISPLAY "RESULTADO = (2 + 3) * 5 = "RESULTADO.
+
+      * el ** indica potencia
+           COMPUTE RESULTADO = 3 ** 3.
+           DISPLAY "RESULTADO = 3 ** 3 = "RESULTADO.
+
+      *  en C el numero negativo mas grande que se puede almacenar en un
+      * int es -2147483648
+           move -9000000000.22 to numerogrande
+           display numerogrande.
 
            STOP RUN.
