@@ -1,4 +1,6 @@
 # curso-COBOL
+[![Docker Repository][docker-image]][docker-url]
+
 Es repositorio brinda los recursos necesarios para una introducción inicial al lenguaje COBOL.
 
 Para ejecutar los programas puede utilizar el contenedor ```neomatrixcode/cobol```.
@@ -29,7 +31,8 @@ Las líneas de codigo cambiaran su comportamiento en función del numero de colu
 - Por último, el área de identificación va de las columnas 73 a la 80, normalmente se encuentra en blanco y el programador lo puede utilizar para cualquier propósito.
 
 
-
+[docker-image]: https://img.shields.io/badge/Docker-gnucobol-1aaaf8.svg?style=flat-square
+[docker-url]: https://hub.docker.com/r/neomatrixcode/cobol
 
 
 
