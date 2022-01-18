@@ -3,7 +3,7 @@
 
 Es repositorio brinda los recursos necesarios para una introducción inicial al lenguaje COBOL.
 
-Para ejecutar los programas puede utilizar el contenedor ```neomatrixcode/cobol```.
+Para ejecutar los programas puede utilizar el contenedor [```neomatrixcode/cobol```](https://github.com/neomatrixcode/docker-gnucobol).
 
 ```bash
 docker run --rm -it -v <folder>:/app neomatrixcode/cobol
